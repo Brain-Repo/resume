@@ -1,0 +1,94 @@
+doctype html
+-
+    var edutext={
+        '01.09.1990 - 01.06.2001':'Общеобразовательная школа I-III ступеней №2',
+        '01.09.2001-30.06.2007':'ДонНТУ (Донецкий Национальный Технический Университет) специальность "Телекоммуникационные системы и сети'
+    }
+    var worktexttelecom={
+                '03.04.2006':'Инженер электросвязи производственной лаборатории',
+                '01.09.2007':'Инженер электросвязи группы по обслуживанию НУП (необслуживаемый усилительный пункт) аналоговых систем передачи цеха цифровых систем передачи №1',
+                '01.05.2008':'Инженер электросвязи второй категории по обслуживанию оборудования TDM, WDM, IP цеха технической эксплуатации транспортной телекоммуникационной сети.',
+                '16.03.2012':'Уволен по собственному желанию.'
+                    }
+    var worktextdelta={
+                '01.05.2012': 'Инженер телекоммуникаций.',
+                '01.02.2013': 'Руководитель технического отдела.',
+                '29.08.2013': 'Уволен по собственному желанию.'
+    }
+    var worktexteast= {
+                '01.10.2013': 'Администратор системы.'
+    }
+    var coursestext={
+        '05.11.2007-16.11.2007':'Оборудование и техническая эксплуатация ВОСП CWDM, DWDM, SDH компании ECI',
+        '04.02.2008-22.02.2008':'Оборудование и техническая эксплуатация ВОСП компании Lucent Technologies',
+        '10.01.2009-13.02.2009':'                     Эксплуатация мультиплексоров DSLAM компании Huawei и Iskratel\n' +
+                '                     Эксплуатация и обслуживание цифровых систем передачи "Watson-Links", "Megatrans", "Orion"\n' +
+                '                         ECI Training Services Dept',
+        '26.04.2010-30.04.2010':'EMS-BGF&NMS (оборудование и системы управления элементами сети)'
+    }
+
+
+header
+    img.photo(src='/dist/img/photo.jpg')
+    .present
+        h1
+            span.surname Пилипенко
+            span.name Анатолий Юрьевич
+        hr
+        .weblinks
+            h1.git-link Github
+            h1.facebook-link Gitlab
+            h1.site-link Facebook
+            h1.youtube-link Telegram
+        hr
+section.page
+    section.sidebar
+            article
+                h1.sidebar-item-head Общие навыки
+                h1.sidebar-item-head Специальные навыки
+                h1.sidebar-item-head Контакты
+    main.content
+        article.education
+            h1.content-item-head Образование
+
+            each val,key in edutext
+                .article-item
+                    aside.article-aside=key
+                    p.article-content-zeromargin.article-content=val
+
+        article.work
+            h1.content-item-head Трудовая деятельность
+            h1.content-item-subhead.
+                            ОАО "Укртелеком"
+                 Центр технической эксплуатации первичной сети №3
+            each val,key in worktexttelecom
+                .article-item
+                    aside.article-aside=key
+                    p.article-content-zeromargin.article-content=val
+
+
+            h1.content-item-subhead ООО "Дельта-телеком"
+            each val,key in worktextdelta
+                .article-item
+                    aside.article-aside=key
+                    p.article-content-zeromargin.article-content=val
+
+
+
+            h1.content-item-subhead ООО "Ист.Нет"
+            each val,key in worktexteast
+                .article-item
+                    aside.article-aside=key
+                    p.article-content-zeromargin.article-content=val
+        article.courses
+            h1.content-item-head Курсы
+            h1.content-item-subhead ОАО "Укртелеком", филиал "Центр последипломного образования"
+            each val,key in coursestext
+                .article-item
+                    aside.article-aside=key
+                    p.article-content-zeromargin.article-content=val
+
+
+
+    footer
+
