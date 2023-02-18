@@ -1,9 +1,8 @@
 console.log ("get start resume progect");
-// import './root.pug';
-// import './index.sass';
 import './pages/start.js'
 import './fonts/index.js'
 import './img/index.js'
+import '../_old/photo.jpg'
 
 const getLogger = require('webpack-log');
 const log = getLogger({ name: 'webpack-batman' });

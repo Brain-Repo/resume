@@ -1,18 +1,13 @@
 header
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
   align-items: flex-end
-  width: 100%
-  margin-left: auto
-  margin-right: auto
-  margin-top: 162px
-  max-width: 1920px
+  background-image: url('../img/lines-header.svg')
+  background-position: right top
+  background-size: cover //иначе, часть фона лезет с левой стороны header
+  padding: 60px 0 60px 0
 
 .present
   width: 100%
   max-width: 1000px
-
 
 .surname
   font-family: 'Roboto'
@@ -39,14 +34,24 @@ hr
 .weblinks
   display: flex
 
-.page
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
-  width: 100%
-  margin-left: auto
-  margin-right: auto
-  margin-top: 162px
+.weblinks-text-style
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 500
+  font-size: 26.1444px
+  line-height: 31px
+  letter-spacing: 0.03em
+  color: #333333
+
+.weblinks > a
+  margin-right: 10px
+
+
+
+//.page
+//  display: flex
+//  flex-wrap: wrap
+//  justify-content: space-around
 
 .article-aside
   font-family: 'Poppins'
@@ -93,6 +98,26 @@ hr
   text-transform: uppercase
   color: #157698
 
+.contact
+  margin-right: 15px
+  width: 35px
+  height: 35px
+
+
+.sidebar-content-item
+  display: flex
+  margin-bottom: 20px
+
+.sidebar-content-item > span
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 400
+  font-size: 26.9133px
+  line-height: 32px
+  letter-spacing: 0.05em
+  color: #4F4F4F
+  max-width: 100%
+
 .content-item-head
   font-family: 'Poppins'
   font-style: normal
@@ -113,7 +138,6 @@ hr
   letter-spacing: 0.03em
   color: #157698
 
-
 .article-item
   display: flex
 
@@ -123,3 +147,23 @@ hr
 .article-content-zeromargin
   margin-top: 0px
 
+footer
+  background-image: url('../img/lines-footer.svg')
+  background-position: left bottom
+  background-size: cover
+  height: 500px
+
+.page-layout-size
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  max-width: 1920px
+
+.page-layout-margin-top
+  margin-top: 90px
+
+.layout-shadow
+  box-shadow: 0px 1px 24px 6px #57A3C6

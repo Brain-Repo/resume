@@ -1,7 +1,7 @@
 doctype html
 -
     var edutext={
-        '01.09.1990 - 01.06.2001':'Общеобразовательная школа I-III ступеней №2',
+        '01.09.1990-01.06.2001':'Общеобразовательная школа I-III ступеней №2',
         '01.09.2001-30.06.2007':'ДонНТУ (Донецкий Национальный Технический Университет) специальность "Телекоммуникационные системы и сети'
     }
     var worktexttelecom={
@@ -28,25 +28,37 @@ doctype html
     }
 
 
-header
-    img.photo(src='/dist/img/photo.jpg')
+header.page-layout-size.layout-shadow
+    img.photo(src=require('../img/photo.jpg'))
     .present
         h1
-            span.surname Пилипенко
+            span.surname Пилипенко  
             span.name Анатолий Юрьевич
         hr
         .weblinks
-            h1.git-link Github
-            h1.facebook-link Gitlab
-            h1.site-link Facebook
-            h1.youtube-link Telegram
+            a.git-link.weblinks-text-style(href='https://github.com/Brain-Repo/resume') Github
+            a.facebook-link.weblinks-text-style Gitlab
+            a.site-link.weblinks-text-style Facebook
+            a.youtube-link.weblinks-text-style Telegram
         hr
-section.page
+section.page.page-layout-size.layout-shadow.page-layout-margin-top
     section.sidebar
             article
                 h1.sidebar-item-head Общие навыки
+                .sidebar-content.sidebar-content-skills
                 h1.sidebar-item-head Специальные навыки
+                .sidebar-content.sidebar-content-specscills
                 h1.sidebar-item-head Контакты
+                .sidebar-content.sidebar-content-contacts
+                    .sidebar-content-item
+                        img.contact(src=require('../ico/Phone.svg'))
+                        span +(555)333-22-11 +(555)444-33-22 +(555)444-33-22
+                    .sidebar-content-item
+                        img.contact(src=require('../ico/mail.svg'))
+                        span p330543@gmail.com
+                    .sidebar-content-item
+                        img.contact(src=require('../ico/location.svg'))
+                        span ул.Улица, д. дом кв. квартира
     main.content
         article.education
             h1.content-item-head Образование
@@ -59,8 +71,7 @@ section.page
         article.work
             h1.content-item-head Трудовая деятельность
             h1.content-item-subhead.
-                            ОАО "Укртелеком"
-                 Центр технической эксплуатации первичной сети №3
+                            ОАО "Укртелеком" Центр технической эксплуатации первичной сети №3
             each val,key in worktexttelecom
                 .article-item
                     aside.article-aside=key
@@ -90,5 +101,5 @@ section.page
 
 
 
-    footer
+footer.page-layout-size.page-layout-margin-top.layout-shadow
 

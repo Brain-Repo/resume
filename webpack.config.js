@@ -7,6 +7,7 @@ const PATH_SRC=path.resolve(__dirname, 'src')
 const PATHS = {
     src: path.join(__dirname, 'src'),
     dist: path.join(__dirname, 'dist'),
+    public: path.join(__dirname, 'public'),
     pages: path.join(__dirname, './src/pages')
 }
 const PAGES_DIR = `${PATHS.src}`
@@ -18,6 +19,7 @@ module.exports = {
     target: 'web',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        // publicPath: path.resolve(__dirname, 'public'),
         filename: '[name].bundle.js',
         clean: true
     },
@@ -35,11 +37,11 @@ module.exports = {
             template: './src/root.pug',
         }),
     ],
-
+    devtool: 'inline-source-map',
     devServer:{
         host: '192.168.110.35',
         port:8080,
-        //static:{directory: path.join(__dirname, 'public')},
+        static:{directory: path.join(__dirname, 'public')},
         client:{
             overlay:{errors:true,warnings:false},
             progress:true
@@ -50,10 +52,25 @@ module.exports = {
             {test: /\.html$/i, loader: "html-loader"},
             {test: /\.pug$/i, use:["pug-loader"]},
             {test: /\.s[ac]ss$/i, use:["style-loader",'css-loader','sass-loader']},
-            {test: /\.(jpe?g|png|gif|svg|ico)$/i, loader: 'file-loader',
-                options: {name: '/dist/img/[name].[ext]'}
-            }
+            {test: /\.(jpe?g|png|gif|svg|ico)$/i, type: 'asset/resource'}
             ]
             }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
